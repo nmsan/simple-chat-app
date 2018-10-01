@@ -1,0 +1,15 @@
+<nav class="navbar navbar-expand-md fixed-top navbar-dark bg-dark">
+  <a class="navbar-brand" href="#">Simple Chat App</a>
+</nav>
+<main role="main" class="container" style="margin-top: 75px">
+  <div class="row">
+    <div class="col-6">
+      <app-chat-window [messages]="(focusTo) ? focusTo.getAllMessage() : messages"
+                       (chatting)="send($event)"></app-chat-window>
+    </div>
+    <div class="col-6">
+      <app-user-list [users]="userList" (changeChat)="changeFocus($event)"
+                     [pubUnreadCount]="getPublicUnreadCount()"></app-user-list>
+    </div>
+  </div>
+</main>
