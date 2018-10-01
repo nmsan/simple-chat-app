@@ -4,8 +4,7 @@ import {User} from "../shared/user";
 
 @Component({
   selector: 'app-chat-window',
-  templateUrl: './chat-window.component.html',
-  styleUrls: ['./chat-window.component.css']
+  templateUrl: './chat-window.component.html'
 })
 export class ChatWindowComponent implements OnInit, OnChanges {
 
